@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="checkTemp(); return false">
+    <h2>Temperature Form</h2><br>
+    <label >Temperature</label>
+    <input type="number" placeholder="Enter Temperature" id="temp">
+    <input type="submit" value="Check">
+    <p id="data">Temperature</p>
+</form>
+
+ <script>
+ function checkTemp(){
+    let tem = document.querySelector("#temp").value ;
+    
+    if(tem <= 30 && tem > 15){
+       
+        document.querySelector("#data").innerHTML= "Its freezing ";
+        
+    }
+        else if(tem < 15 && tem > 1 ){
+            document.querySelector("#data").innerHTML= "Its freezing ";
+            
+        }
+        else if (tem <50 && tem > 30){
+            document.querySelector("#data").innerHTML= "Its hot Today";
+        }
+        else if(tem >= 50 && tem <=70 ){
+            document.querySelector("#data").innerHTML= "Its very hot Today";
+        }
+        else{
+            document.querySelector("#data").innerHTML= "Re Enter your value";
+    }
+}
+ 
+ </script>
+</body>
+</html>
